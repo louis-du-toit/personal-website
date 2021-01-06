@@ -33,8 +33,42 @@ const GenerateMeme = styled.button`
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 `;
-const MemeImage = styled.img`
+const MemeContainer = styled.div`
+  position: relative;
+  height: 600px;
   width: 600px;
+`;
+const MemeImage = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+const TopText = styled.p`
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+  filter: drop-shadow(0 0 5px black);
+  color: white;
+  position: absolute;
+  font-weight: 600;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const BottomText = styled.p`
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+  filter: drop-shadow(0 0 5px black);
+  color: white;
+  position: absolute;
+  font-weight: 600;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 function App() {
@@ -55,7 +89,11 @@ function App() {
       <GenerateMeme onClick={() => generateMeme()}>
         holy fuck it's a meme, click me cunt
       </GenerateMeme>
-      <MemeImage src={meme} />
+      <MemeContainer>
+        <MemeImage src={meme} />
+        <TopText>Fuck</TopText>
+        <BottomText>You</BottomText>
+      </MemeContainer>
     </StyledApp>
   );
 }
