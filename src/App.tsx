@@ -21,6 +21,7 @@ import seventeen from "./assets/memes/17.png";
 import eighteen from "./assets/memes/18.png";
 import ninteen from "./assets/memes/19.png";
 import twenty from "./assets/memes/20.png";
+import InDevelopment from "./InDevelopment";
 
 const pepemessage = "thanks for visiting ya dingus";
 
@@ -223,6 +224,7 @@ function App() {
         <TopText>{topText}</TopText>
         <BottomText>{bottomText}</BottomText>
       </MemeContainer>
+      <InDevelopment />
     </StyledApp>
   );
 }
